@@ -1,4 +1,4 @@
-[![Build Firmware](https://github.com/atomic14/esp32-jpeg-tests/actions/workflows/build_firmware.yml/badge.svg)](https://github.com/atomic14/esp32-jpeg-tests/actions/workflows/build_firmware.yml)
+[![Build Firmware](https://github.com/atomic14/esp32-jpeg-perf-tests/actions/workflows/build_firmware.yml/badge.svg)](https://github.com/atomic14/esp32-jpeg-perf-tests/actions/workflows/build_firmware.yml)
 
 # ESP32 JPEG Performance Test
 [![Demo Video](https://img.youtube.com/vi/OyoN1ypBSrQ/0.jpg)](https://www.youtube.com/watch?v=OyoN1ypBSrQ)
@@ -26,4 +26,4 @@ You might be wondering why the total draw+decode time does not look particularly
 
 With the esp32-tv project this may not matter that much - we can display the current frame of the video while the next frame is being decoded. For displaying a single image it's still not terrible. We can do the decode very quickly and then the CPU is free to do other stuff while the display is being updated.
 
-I've done some very adhoc tests and we can get almost 50fps! Which is pretty amazing.
+I've done some very adhoc tests and we can get almost 40fps! Which is pretty amazing.
