@@ -17,10 +17,13 @@ Here's the results running on an ESP32-S3 with PSRAM.
 |------------------------|-------------|------------------|---------------|
 | Bodmer/JPEGDecoder     | 108         | 118              | 10            |
 | Bodmer/TJpg_Decoder    | 55          | 64               | 9             |
-| bitbank2/JPEGDEC       | 32          | 38               | 6             |
+| ~~bitbank2/JPEGDEC~~       | ~~32~~          | ~~38~~               | ~~6~~             |
+| bitbank2/JPEGDEC (New!)       | 23          | 29               | 6             |
 | ESP32_JPEG             | 20          | 37               | 17            |
 
 As you can see it is very fast - 20ms to decode the image.
+
+NOTE - there's a new improved version of the bitbank2/JPEGDEC library which takes advantage of SIMD instructions on the ESP32S3. This now decodes JPEGS in just 23ms!
 
 You might be wondering why the total draw+decode time does not look particularly good. There's a good explanation in the video and it comes down to using DMA to draw the image. With the other options we can overlap sending blocks of pixels to the screen with decoding the next block of pixels. With this library we have to wait for the entire image to be decoded before we can start sending it to the screen.
 
